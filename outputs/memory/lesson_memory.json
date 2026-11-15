@@ -1,0 +1,65 @@
+{
+    "version": 1,
+    "memories": [
+        {
+            "topic": "FastAPI explain",
+            "subtopic_type": "core",
+            "subtopic_title": "Creating a basic application",
+            "criterion": "beginner_friendly",
+            "rule": "The explanation of the decorator and the concept of 'listening for a request' is too abstract for a beginner. Use a simpler analogy, such as a waiter taking an order, to explain how the decorator connects a URL to a function.",
+            "occurrences": 1,
+            "created_at": "2026-11-14T17:36:58.999286+00:00",
+            "last_seen": "2026-11-14T17:36:58.999286+00:00"
+        },
+        {
+            "topic": "FastAPI explain",
+            "subtopic_type": "core",
+            "subtopic_title": "Creating a basic application",
+            "criterion": "jargon_explanation",
+            "rule": "Explain the term 'decorator' in simple language. For example, you can say it's a way to attach a function to a URL, like putting a sign on a door that says 'This is the entrance'.",
+            "occurrences": 1,
+            "created_at": "2026-11-14T17:36:58.999286+00:00",
+            "last_seen": "2026-11-14T17:36:58.999286+00:00"
+        },
+        {
+            "topic": "MCP Server",
+            "subtopic_type": "core",
+            "subtopic_title": "How Does an MCP Server Work?",
+            "criterion": "required_coverage",
+            "rule": "The 'Process' step is mentioned in the text but not clearly defined as a distinct action in the numbered list. The final sentence about the server doing the work is not explicitly linked to the numbered steps.",
+            "occurrences": 1,
+            "created_at": "2026-11-14T17:56:58.870177+00:00",
+            "last_seen": "2026-11-14T17:56:58.870177+00:00"
+        },
+        {
+            "topic": "MCP Server",
+            "subtopic_type": "core",
+            "subtopic_title": "How Does an MCP Server Work?",
+            "criterion": "required_coverage",
+            "rule": "The explanation of the 'simple language' is missing. You need to explain what this language is (e.g., a standard way to talk) and why it is used (e.g., so different programs can understand each other).",
+            "occurrences": 1,
+            "created_at": "2026-11-14T17:57:15.377008+00:00",
+            "last_seen": "2026-11-14T17:57:15.377008+00:00"
+        },
+        {
+            "topic": "MCP Server",
+            "subtopic_type": "wrap-up",
+            "subtopic_title": "Summary and Next Steps",
+            "criterion": "beginner_friendly",
+            "rule": "The explanation is too abstract. You need to explain what 'connecting programs' means using a simple analogy, like a bridge or a translator, before defining the term.",
+            "occurrences": 1,
+            "created_at": "2026-11-14T17:58:11.553332+00:00",
+            "last_seen": "2026-11-14T17:58:11.553332+00:00"
+        },
+        {
+            "topic": "MCP Server",
+            "subtopic_type": "wrap-up",
+            "subtopic_title": "Summary and Next Steps",
+            "criterion": "example_quality",
+            "rule": "The example is irrelevant. You need to create an example that shows how an MCP Server connects two different programs, such as a chat app and a weather app.",
+            "occurrences": 1,
+            "created_at": "2026-11-14T17:58:11.553332+00:00",
+            "last_seen": "2026-11-14T17:58:11.553332+00:00"
+        }
+    ]
+}

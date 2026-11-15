@@ -208,7 +208,7 @@ def main():
 
     lesson = workflow.run(
 
-        topic="The menstrual cycle",
+        topic="MCP Server",
 
         learner_profile=(
             "Indian 12th-grade student, "

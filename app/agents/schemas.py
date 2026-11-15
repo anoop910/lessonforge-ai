@@ -143,4 +143,71 @@ class LessonContentRequest(BaseModel):
         ge=200,
         le=3000
     )
+    
+    
+    
+    
+
+from typing import Literal
+from pydantic import BaseModel, Field, ConfigDict, model_validator
+
+
+CriterionName = Literal[
+    "accuracy",
+    "required_coverage",
+    "beginner_friendly",
+    "simple_language",
+    "jargon_explanation",
+    "example_quality"
+]
+
+
+class RubricCriterionResult(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    criterion: CriterionName
+    score: int = Field(ge=1, le=5)
+    passed: bool
+    evidence: str
+    feedback: str
+
+    @model_validator(mode="after")
+    def validate_score(self):
+        if self.passed != (self.score >= 4):
+            raise ValueError(
+                "A criterion passes only when its score is 4 or 5."
+            )
+        return self
+
+
+class LessonEvaluation(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    criteria: list[RubricCriterionResult] = Field(min_length=6)
+    revision_instructions: list[str]
+
+    @model_validator(mode="after")
+    def validate_criteria(self):
+        expected = {
+            "accuracy",
+            "required_coverage",
+            "beginner_friendly",
+            "simple_language",
+            "jargon_explanation",
+            "example_quality"
+        }
+
+        actual = {item.criterion for item in self.criteria}
+
+        if actual != expected or len(self.criteria) != 6:
+            raise ValueError(
+                "All six rubric criteria must appear exactly once."
+            )
+
+        return self
+
+    @property
+    def passed(self) -> bool:
+        return all(item.passed for item in self.criteria)
+
 
