@@ -1,5 +1,6 @@
 
 import os
+import json
 from typing import Any
 
 import requests
@@ -14,6 +15,10 @@ from langchain_core.callbacks import CallbackManagerForLLMRun
 
 # Load environment variables
 load_dotenv()
+
+
+class ZohoRequestTooLargeError(RuntimeError):
+    """Raised when Zoho rejects a prompt because its input is too large."""
 
 
 class ZohoQuickMLChat(BaseChatModel):
@@ -194,10 +199,18 @@ class ZohoQuickMLChat(BaseChatModel):
         except requests.exceptions.HTTPError as exc:
 
             error_body = exc.response.text[:1000]
+            status_code = exc.response.status_code
+
+            if "MORE_THAN_MAX_LENGTH" in error_body:
+                raise ZohoRequestTooLargeError(
+                    "Zoho rejected the prompt because it exceeds the "
+                    "endpoint's maximum input length. Reduce previous-section "
+                    "context, source facts, memory rules, or revision text. "
+                    f"HTTP {status_code}: {error_body}"
+                ) from exc
 
             raise RuntimeError(
-                f"Zoho HTTP error: "
-                f"{exc.response.status_code}. "
+                f"Zoho HTTP error: {status_code}. "
                 f"Details: {error_body}"
             ) from exc
 
@@ -237,8 +250,16 @@ class ZohoQuickMLChat(BaseChatModel):
                 "this adapter yet."
             )
 
-        # Build request
+        # Build request and report its size without logging prompt contents.
         payload = self._build_payload(messages)
+        prompt_chars = len(payload["prompt"])
+        payload_bytes = len(
+            json.dumps(payload, ensure_ascii=False).encode("utf-8")
+        )
+        print(
+            f"[ZOHO REQUEST] prompt_chars={prompt_chars:,}, "
+            f"payload_bytes={payload_bytes:,}"
+        )
 
         # Call Zoho API
         data = self._call_zoho(payload)

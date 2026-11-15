@@ -79,67 +79,74 @@ class LessonMemory:
         )
 
     
+    MAX_RULES_PER_SUBTOPIC = 4
+
     def get_rules(
-    self,
-    topic,
-    subtopic_type=None,
-    subtopic_title=None
+        self,
+        topic,
+        subtopic_type=None,
+        subtopic_title=None,
     ):
+        """Return a small, relevant set of previously learned rules.
 
+        Exact subtopic matches rank first. Topic-level rules (records with no
+        subtopic_title) rank after them. Rules from other subtopics are not
+        mixed into the current prompt.
+        """
         data = self._load()
-
         topic_key = self._normalize(topic)
+        title_key = (
+            self._normalize(subtopic_title)
+            if subtopic_title else None
+        )
 
-        relevant_rules = []
+        candidates = []
 
         for memory in data["memories"]:
-
-            saved_topic_key = self._normalize(
-            memory.get("topic", "")
-            )
-
-            # Match the same topic or global rules.
-            topic_matches = (
-            saved_topic_key == topic_key
-            or saved_topic_key == "*"
-            )
-
-            if not topic_matches:
+            saved_topic = self._normalize(memory.get("topic", ""))
+            if saved_topic not in {topic_key, "*"}:
                 continue
 
             saved_type = memory.get("subtopic_type")
-
-            type_matches = (
-            saved_type is None
-            or saved_type == subtopic_type
-            )
-
-            if not type_matches:
+            if saved_type is not None and saved_type != subtopic_type:
                 continue
 
             saved_title = memory.get("subtopic_title")
-
-            # Title-specific memories should only be used
-            # for the same subtopic.
-            if saved_title and subtopic_title:
-
-                title_matches = (
-                self._normalize(saved_title)
-                == self._normalize(subtopic_title)
-                )
-
-                if not title_matches:
+            if saved_title:
+                if not title_key:
                     continue
+                if self._normalize(saved_title) != title_key:
+                    continue
+                specificity = 2
+            else:
+                specificity = 1
 
-            elif saved_title and not subtopic_title:
-
-            # Do not apply title-specific memory
-            # when no target title is provided.
+            rule = str(memory.get("rule", "")).strip()
+            if not rule:
                 continue
 
-            relevant_rules.append(memory["rule"])
+            candidates.append((
+                specificity,
+                int(memory.get("occurrences", 1)),
+                str(memory.get("last_seen", "")),
+                rule,
+            ))
 
-        return list(dict.fromkeys(relevant_rules))
+        # Prefer exact-title rules, then repeatedly confirmed and recent rules.
+        candidates.sort(key=lambda item: (item[0], item[1], item[2]), reverse=True)
+
+        selected = []
+        seen = set()
+        for _, _, _, rule in candidates:
+            normalized = self._normalize(rule)
+            if normalized in seen:
+                continue
+            seen.add(normalized)
+            selected.append(rule)
+            if len(selected) >= self.MAX_RULES_PER_SUBTOPIC:
+                break
+
+        return selected
 
     def learn_from_evaluation(
         self,
@@ -180,6 +187,11 @@ class LessonMemory:
                     == subtopic.type
                 )
 
+                same_title = (
+                    self._normalize(memory.get("subtopic_title", ""))
+                    == self._normalize(subtopic.title)
+                )
+
                 same_criterion = (
                     memory["criterion"]
                     == criterion.criterion
@@ -193,6 +205,7 @@ class LessonMemory:
                 if (
                     same_topic
                     and same_type
+                    and same_title
                     and same_criterion
                     and same_rule
                 ):

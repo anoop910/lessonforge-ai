@@ -1,0 +1,195 @@
+[
+  {
+    "run_id": "20261115-121950-acids-bases-and-salts",
+    "subtopic_id": "S1",
+    "subtopic_title": "What are Acids and Bases?",
+    "attempt": 1,
+    "failed_criteria": [
+      "jargon_explanation"
+    ],
+    "reasons": [
+      "[jargon_explanation] The terms 'Acid' and 'Base' are not defined in simple words. Add a definition like 'An Acid is a substance that tastes sour and can burn the skin.'"
+    ],
+    "changes_requested_on_retry": [
+      "[jargon_explanation] The terms 'Acid' and 'Base' are not defined in simple words. Add a definition like 'An Acid is a substance that tastes sour and can burn the skin.'"
+    ],
+    "words_before_retry": 113,
+    "retry_result": "FAILED again: jargon_explanation",
+    "rejected_content": "### What are Acids and Bases?\n\n**Acid** (a substance that tastes sour and burns).\n\nImagine a lemon. It tastes very sour. If you touch lemon juice on your skin, it can burn. This is because it is an acid. We find acids in sour foods like lemon juice and vinegar.\n\n**Base** (a substance that tastes bitter and feels slippery).\n\nImagine soap. It tastes bitter. If you touch soap, it feels slippery on your hands. This is because it is a base. We find bases in cleaning products like baking soda.\n\n**How to tell them apart:**\n\n1.  **Taste:** Acids taste sour. Bases taste bitter.\n2.  **Touch:** Acids can burn the skin. Bases feel slippery.",
+    "words_after_retry": 106
+  },
+  {
+    "run_id": "20261115-121950-acids-bases-and-salts",
+    "subtopic_id": "S1",
+    "subtopic_title": "What are Acids and Bases?",
+    "attempt": 2,
+    "failed_criteria": [
+      "jargon_explanation"
+    ],
+    "reasons": [
+      "[jargon_explanation] Define 'Acid' and 'Base' in simple words at their first use, for example: 'Acid (a substance that tastes sour and can burn the skin).'"
+    ],
+    "changes_requested_on_retry": [
+      "[jargon_explanation] Define 'Acid' and 'Base' in simple words at their first use, for example: 'Acid (a substance that tastes sour and can burn the skin).'"
+    ],
+    "words_before_retry": 106,
+    "retry_result": "FAILED again: required_coverage, jargon_explanation",
+    "rejected_content": "### What are Acids and Bases?\n\n**Acid** (a substance that tastes sour and can burn the skin).\n\nImagine a lemon. It tastes very sour. This sour taste is an acid. Acids are also in vinegar. They can burn your skin if you touch them.\n\n**Base** (a substance that tastes bitter and feels slippery).\n\nImagine soap. It tastes bitter. It also feels slippery on your hands. This is a base. Bases are in cleaning products. They help clean dirty things.\n\n**Example:**\n1.  Taste a small amount of lemon juice. It tastes sour. This is an acid.\n2.  Touch some soap. It feels slippery. This is a base.",
+    "words_after_retry": 127
+  },
+  {
+    "run_id": "20261115-121950-acids-bases-and-salts",
+    "subtopic_id": "S1",
+    "subtopic_title": "What are Acids and Bases?",
+    "attempt": 3,
+    "failed_criteria": [
+      "required_coverage",
+      "jargon_explanation"
+    ],
+    "reasons": [
+      "[required_coverage] The content mentions 'cleaning products' but does not explain that baking soda is a base, which is a required concept.",
+      "[jargon_explanation] The term 'Acid' is not defined in simple words; it is just a label."
+    ],
+    "changes_requested_on_retry": [
+      "[required_coverage] The content mentions 'cleaning products' but does not explain that baking soda is a base, which is a required concept.",
+      "[jargon_explanation] The term 'Acid' is not defined in simple words; it is just a label."
+    ],
+    "words_before_retry": 127,
+    "retry_result": "no retry left",
+    "rejected_content": "### What are Acids and Bases?\n\n**Acid** (a substance that tastes sour and can burn the skin).\n\nLemons are very sour. They are an acid. If you touch lemon juice on your skin, it can burn. Vinegar is also an acid. It tastes sharp.\n\n**Base** (a substance that tastes bitter and feels slippery).\n\nSoap is a base. It feels slippery on your hands. It tastes bitter. Baking soda is another base. It is used in cleaning products.\n\n**Example: Tasting and Touching**\n\n1.  Take a lemon. Cut it. Taste a small piece. It tastes sour. This is an acid.\n2.  Take a bar of soap. Touch it. It feels slippery. This is a base.\n3.  Bases are used to clean dirty things. Acids are found in sour foods."
+  },
+  {
+    "run_id": "20261115-121950-acids-bases-and-salts",
+    "subtopic_id": "S2",
+    "subtopic_title": "Testing Acids and Bases",
+    "attempt": 1,
+    "failed_criteria": [
+      "required_coverage"
+    ],
+    "reasons": [
+      "[required_coverage] Explain the specific color changes: litmus paper turns red in acids and blue in bases."
+    ],
+    "changes_requested_on_retry": [
+      "[required_coverage] Explain the specific color changes: litmus paper turns red in acids and blue in bases."
+    ],
+    "words_before_retry": 140,
+    "retry_result": "FAILED again: jargon_explanation",
+    "rejected_content": "### Testing Acids and Bases\n\nWe cannot taste acids or bases to test them. They can hurt our mouths. We use a special tool called an **indicator** (a substance that shows the type of chemical).\n\nA common indicator is **Litmus paper** (paper that changes color to show if something is an acid or a base).\n\n**How to use Litmus paper:**\n\n1.  Take a piece of blue litmus paper.\n2.  Dip it into a liquid.\n3.  Watch the color change.\n\n**Example: Lemon Juice**\n\n1.  Lemon juice is an acid.\n2.  Dip the blue paper into the lemon juice.\n3.  The paper turns red.\n\n**Example: Soap Water**\n\n1.  Soap water is a base.\n2.  Dip the blue paper into the soap water.\n3.  The paper turns blue.\n\n**Summary:**\n*   **Acids** turn blue litmus paper **red**.\n*   **Bases** turn blue litmus paper **blue**.",
+    "words_after_retry": 131
+  },
+  {
+    "run_id": "20261115-121950-acids-bases-and-salts",
+    "subtopic_id": "S2",
+    "subtopic_title": "Testing Acids and Bases",
+    "attempt": 2,
+    "failed_criteria": [
+      "jargon_explanation"
+    ],
+    "reasons": [
+      "[jargon_explanation] The term 'Litmus paper' is not defined in the previously taught content. Define it in this section."
+    ],
+    "changes_requested_on_retry": [
+      "[jargon_explanation] The term 'Litmus paper' is not defined in the previously taught content. Define it in this section."
+    ],
+    "words_before_retry": 131,
+    "retry_result": "PASSED",
+    "rejected_content": "### Testing Acids and Bases\n\nWe cannot taste acids or bases to check them. Tasting them can hurt us. We use a special tool for this. This tool is called **Litmus paper** (a paper that changes color to show if something is an acid or a base).\n\n**Litmus paper turns red in acids.**\nIt turns blue in bases.\n\n**Example:**\n1.  Take a piece of litmus paper.\n2.  Dip it into lemon juice.\n    *   The paper turns red.\n    *   This means lemon juice is an acid.\n3.  Take another piece of litmus paper.\n4.  Dip it into soap water.\n    *   The paper turns blue.\n    *   This means soap water is a base.\n\nThis test is safe. It is common in laboratories. We use it to identify acids and bases without tasting them.",
+    "words_after_retry": 123
+  },
+  {
+    "run_id": "20261115-121950-acids-bases-and-salts",
+    "subtopic_id": "S3",
+    "subtopic_title": "How Acids and Bases React",
+    "attempt": 1,
+    "failed_criteria": [
+      "beginner_friendly",
+      "simple_language"
+    ],
+    "reasons": [
+      "[beginner_friendly] Explain that 'cancel each other out' means the acid and base react to form a new, neutral substance (salt and water) rather than disappearing.",
+      "[simple_language] Replace the phrase 'cancel each other out' with a simpler explanation, such as 'they react to form a new, neutral substance.'"
+    ],
+    "changes_requested_on_retry": [
+      "[beginner_friendly] Explain that 'cancel each other out' means the acid and base react to form a new, neutral substance (salt and water) rather than disappearing.",
+      "[simple_language] Replace the phrase 'cancel each other out' with a simpler explanation, such as 'they react to form a new, neutral substance.'"
+    ],
+    "words_before_retry": 110,
+    "retry_result": "PASSED",
+    "rejected_content": "### How Acids and Bases React\n\nWhen an acid and a base mix, they neutralize each other. [Neutralization: a reaction where an acid and a base cancel each other out]. This reaction is called neutralization.\n\nThe result of this reaction is a salt. [Salt: a white solid made from an acid and a base]. The reaction also makes water.\n\n**Example: Mixing Vinegar and Baking Soda**\n\n1.  Take a cup of vinegar. Vinegar is an acid.\n2.  Add baking soda. Baking soda is a base.\n3.  Watch the mixture. It bubbles and makes gas.\n4.  The acid and base cancel each other out.\n5.  The result is a salt and water.",
+    "words_after_retry": 118
+  },
+  {
+    "run_id": "20261115-121950-acids-bases-and-salts",
+    "subtopic_id": "S4",
+    "subtopic_title": "Uses of Salts in Daily Life",
+    "attempt": 1,
+    "failed_criteria": [
+      "required_coverage",
+      "jargon_explanation",
+      "example_quality"
+    ],
+    "reasons": [
+      "[required_coverage] Explain how salt helps keep food fresh, such as by stopping the growth of bacteria.",
+      "[jargon_explanation] Explain what 'preservation' means in this context, such as 'keeping food fresh for a long time'.",
+      "[example_quality] Provide a concrete example, such as 'We use salt to clean the kitchen sink.'"
+    ],
+    "changes_requested_on_retry": [
+      "[required_coverage] Explain how salt helps keep food fresh, such as by stopping the growth of bacteria.",
+      "[jargon_explanation] Explain what 'preservation' means in this context, such as 'keeping food fresh for a long time'.",
+      "[example_quality] Provide a concrete example, such as 'We use salt to clean the kitchen sink.'"
+    ],
+    "words_before_retry": 132,
+    "retry_result": "FAILED again: required_coverage, jargon_explanation, example_quality",
+    "rejected_content": "### Uses of Salts in Daily Life\n\n**Food**\nWe use salt in our food. It makes food taste good. It also helps keep food fresh for a long time. We call this preservation. Without salt, food would spoil quickly.\n\n**Medicine**\nDoctors use salts in medicines. They help us feel better when we are sick. Toothpaste is a medicine. It contains salt. Salt helps clean our teeth and keeps our mouth healthy.\n\n**Cleaning**\nSalts are in many cleaning products. We use them to clean our homes. For example, we use salt to clean the kitchen. It helps remove dirt and grease from surfaces.\n\n**The Human Body**\nOur body needs salt to work. It helps our nerves and muscles move. It also helps us drink water. We need salt to stay healthy and strong.",
+    "words_after_retry": 146
+  },
+  {
+    "run_id": "20261115-121950-acids-bases-and-salts",
+    "subtopic_id": "S4",
+    "subtopic_title": "Uses of Salts in Daily Life",
+    "attempt": 2,
+    "failed_criteria": [
+      "required_coverage",
+      "jargon_explanation",
+      "example_quality"
+    ],
+    "reasons": [
+      "[required_coverage] The content does not explain that salts are important for the human body.",
+      "[jargon_explanation] The term 'preservation' is not explained in this content.",
+      "[example_quality] The example is too general. It does not show a concrete, step-by-step use of salt in daily life."
+    ],
+    "changes_requested_on_retry": [
+      "[required_coverage] The content does not explain that salts are important for the human body.",
+      "[jargon_explanation] The term 'preservation' is not explained in this content.",
+      "[example_quality] The example is too general. It does not show a concrete, step-by-step use of salt in daily life."
+    ],
+    "words_before_retry": 146,
+    "retry_result": "FAILED again: required_coverage, jargon_explanation, example_quality",
+    "rejected_content": "### Uses of Salts in Daily Life\n\n**Food**\nWe use salt in our food. It makes food taste good. It also helps keep food fresh for a long time. This is called **preservation** (keeping food fresh for a long time). Salt stops the growth of bacteria. Bacteria are tiny living things that can make food bad. By using salt, we stop bacteria from growing. This keeps the food safe to eat.\n\n**Medicine**\nSalts are also in medicines. We use them to make pills and syrups. They help us feel better when we are sick. For example, some toothpastes contain salt. It helps clean our teeth and keeps our mouth healthy.\n\n**Cleaning**\nSalts are in many cleaning products. We use them to clean our homes. They help remove dirt and stains. For example, we use salt to clean the kitchen sink. It helps remove grease and grime.",
+    "words_after_retry": 164
+  },
+  {
+    "run_id": "20261115-121950-acids-bases-and-salts",
+    "subtopic_id": "S4",
+    "subtopic_title": "Uses of Salts in Daily Life",
+    "attempt": 3,
+    "failed_criteria": [
+      "required_coverage",
+      "jargon_explanation",
+      "example_quality"
+    ],
+    "reasons": [
+      "[required_coverage] Explain how salts are used in medicines, for example, by mentioning that they help balance body fluids or are used in antacids.",
+      "[jargon_explanation] Explain the term 'preservation' in simple words, such as 'keeping food fresh for a long time'.",
+      "[example_quality] Create a step-by-step example that shows how table salt is used in food, toothpaste, and cleaning the kitchen."
+    ],
+    "changes_requested_on_retry": [
+      "[required_coverage] Explain how salts are used in medicines, for example, by mentioning that they help balance body fluids or are used in antacids.",
+      "[jargon_explanation] Explain the term 'preservation' in simple words, such as 'keeping food fresh for a long time'.",
+      "[example_quality] Create a step-by-step example that shows how table salt is used in food, toothpaste, and cleaning the kitchen."
+    ],
+    "words_before_retry": 164,
+    "retry_result": "no retry left",
+    "rejected_content": "### Uses of Salts in Daily Life\n\n**Food**\nWe use salt in food. It makes food taste good. It also helps keep food fresh for a long time. This is called **preservation** (keeping food fresh for a long time). Salt stops the growth of bacteria. Bacteria are tiny living things that can make food bad. We put salt on meat to keep it from spoiling. We also use salt in pickles.\n\n**Medicine**\nSalts are in many medicines. They help us feel better when we are sick. Toothpaste is a good example. Toothpaste has salt. It helps clean our teeth and keeps our mouth healthy.\n\n**Cleaning**\nSalts are in cleaning products. They help us clean dirty things. We use salt to clean the kitchen sink. It helps remove stains. It makes the sink shine.\n\n**The Human Body**\nSalts are very important for the human body. Our body needs salt to work correctly. It helps our nerves and muscles move. We need it to stay healthy."
+  }
+]

@@ -208,7 +208,7 @@ def main():
 
     lesson = workflow.run(
 
-        topic="MCP Server",
+        topic="Acids, Bases, and Salts",
 
         learner_profile=(
             "Indian 12th-grade student, "

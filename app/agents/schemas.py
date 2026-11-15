@@ -1,7 +1,12 @@
-
 from typing import Literal
 
-from pydantic import BaseModel, Field, ConfigDict, model_validator
+from pydantic import (
+    BaseModel,
+    Field,
+    ConfigDict,
+    model_validator,
+    computed_field,
+)
 
 
 class LessonSubtopic(BaseModel):
@@ -143,13 +148,6 @@ class LessonContentRequest(BaseModel):
         ge=200,
         le=3000
     )
-    
-    
-    
-    
-
-from typing import Literal
-from pydantic import BaseModel, Field, ConfigDict, model_validator
 
 
 CriterionName = Literal[
@@ -161,53 +159,140 @@ CriterionName = Literal[
     "example_quality"
 ]
 
+REQUIRED_CRITERIA = frozenset(CriterionName.__args__)
+
 
 class RubricCriterionResult(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+    """One rubric check. Strictly PASS or FAIL. No scores, no partial credit."""
+
+    # "ignore" so a stray field from the model (for example an old
+    # "score" or "passed") does not crash the parser.
+    model_config = ConfigDict(extra="ignore")
 
     criterion: CriterionName
-    score: int = Field(ge=1, le=5)
-    passed: bool
-    evidence: str
-    feedback: str
+    result: Literal["PASS", "FAIL"]
+    evidence: str = Field(
+        min_length=3,
+        description="Short quote from the content that supports the verdict"
+    )
+    feedback: str = Field(
+        default="",
+        description="Required for FAIL: exactly what must change. Empty for PASS."
+    )
 
     @model_validator(mode="after")
-    def validate_score(self):
-        if self.passed != (self.score >= 4):
+    def validate_feedback(self):
+        # A FAIL without an actionable reason cannot be used on retry.
+        if self.result == "FAIL" and len(self.feedback.strip()) < 10:
             raise ValueError(
-                "A criterion passes only when its score is 4 or 5."
+                f"Criterion '{self.criterion}' failed but gave no "
+                "specific feedback."
             )
         return self
+
+    @computed_field
+    @property
+    def passed(self) -> bool:
+        return self.result == "PASS"
 
 
 class LessonEvaluation(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="ignore")
 
-    criteria: list[RubricCriterionResult] = Field(min_length=6)
-    revision_instructions: list[str]
+    criteria: list[RubricCriterionResult]
+
+    @model_validator(mode="before")
+    @classmethod
+    def merge_duplicate_criteria(cls, data):
+        """
+        The judge sometimes writes one entry per finding, so the same
+        criterion can appear twice. Merge them in code: if ANY entry
+        for a criterion is FAIL, the criterion is FAIL.
+        """
+        if not isinstance(data, dict):
+            return data
+
+        items = data.get("criteria")
+
+        if not isinstance(items, list):
+            return data
+
+        groups = {}
+        order = []
+
+        for item in items:
+            if not isinstance(item, dict) or "criterion" not in item:
+                return data  # let normal validation report the problem
+
+            name = item["criterion"]
+
+            if name not in groups:
+                groups[name] = []
+                order.append(name)
+
+            groups[name].append(item)
+
+        merged = []
+
+        for name in order:
+            group = groups[name]
+
+            failed = [
+                g for g in group
+                if str(g.get("result", "")).strip().upper() == "FAIL"
+            ]
+
+            evidence = " | ".join(dict.fromkeys(
+                str(g.get("evidence", "")).strip()
+                for g in group
+                if str(g.get("evidence", "")).strip()
+            ))
+
+            feedback = " ".join(dict.fromkeys(
+                str(g.get("feedback", "")).strip()
+                for g in failed
+                if str(g.get("feedback", "")).strip()
+            ))
+
+            merged.append({
+                "criterion": name,
+                "result": "FAIL" if failed else "PASS",
+                "evidence": evidence,
+                "feedback": feedback,
+            })
+
+        return {**data, "criteria": merged}
 
     @model_validator(mode="after")
     def validate_criteria(self):
-        expected = {
-            "accuracy",
-            "required_coverage",
-            "beginner_friendly",
-            "simple_language",
-            "jargon_explanation",
-            "example_quality"
-        }
-
         actual = {item.criterion for item in self.criteria}
+        missing = sorted(REQUIRED_CRITERIA - actual)
 
-        if actual != expected or len(self.criteria) != 6:
+        if missing:
             raise ValueError(
-                "All six rubric criteria must appear exactly once."
+                f"Missing rubric criteria: {', '.join(missing)}. "
+                "Give exactly one entry for each of the six criteria."
             )
 
         return self
 
+    # The verdict is decided in code, never by the LLM.
+    @computed_field
     @property
     def passed(self) -> bool:
         return all(item.passed for item in self.criteria)
 
+    @computed_field
+    @property
+    def failed_criteria(self) -> list[str]:
+        return [item.criterion for item in self.criteria if not item.passed]
 
+    # Built from the failed checks, so it can never disagree with them.
+    @computed_field
+    @property
+    def revision_instructions(self) -> list[str]:
+        return [
+            f"[{item.criterion}] {item.feedback.strip()}"
+            for item in self.criteria
+            if not item.passed
+        ]

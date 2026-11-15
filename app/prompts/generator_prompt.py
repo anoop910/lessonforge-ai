@@ -96,7 +96,11 @@ Do not go deeper than a beginner needs.
    If uncertain, leave the information out.
 
 8. For each subtopic:
-   - Name the key terms to define.
+   - List only technical, scientific, or genuinely unfamiliar terms in key_terms.
+   - Do NOT list everyday words, common foods, ordinary activities, or broad phrases
+     such as "cleaning" or "road safety" as key_terms.
+   - Use at most 5 key_terms per subtopic. If no special term needs defining,
+     return an empty key_terms list.
    - Suggest one everyday example or analogy.
    - Explain what the learner must understand.
 

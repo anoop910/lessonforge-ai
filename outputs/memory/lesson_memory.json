@@ -60,6 +60,536 @@
             "occurrences": 1,
             "created_at": "2026-11-14T17:58:11.553332+00:00",
             "last_seen": "2026-11-14T17:58:11.553332+00:00"
+        },
+        {
+            "topic": "MCP Server",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What is an MCP Server?",
+            "criterion": "jargon_explanation",
+            "rule": "Explain the term 'Model Context Protocol' in simple words.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:28:42.646169+00:00",
+            "last_seen": "2026-11-15T06:28:42.646169+00:00"
+        },
+        {
+            "topic": "MCP Server",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What is an MCP Server?",
+            "criterion": "jargon_explanation",
+            "rule": "Explain the term 'Model Context Protocol' in simple words, such as 'a set of rules for talking'.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:28:51.871704+00:00",
+            "last_seen": "2026-11-15T06:28:51.871704+00:00"
+        },
+        {
+            "topic": "MCP Server",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What is an MCP Server?",
+            "criterion": "jargon_explanation",
+            "rule": "Explain the term 'Model Context Protocol' in simple words, as it is a key term.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:28:59.161864+00:00",
+            "last_seen": "2026-11-15T06:28:59.161864+00:00"
+        },
+        {
+            "topic": "MCP Server",
+            "subtopic_type": "wrap-up",
+            "subtopic_title": "Summary and Next Steps",
+            "criterion": "example_quality",
+            "rule": "Add a concrete example or everyday analogy, such as a map, to explain the concept.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:30:08.668050+00:00",
+            "last_seen": "2026-11-15T06:30:08.668050+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What are Acids and Bases?",
+            "criterion": "jargon_explanation",
+            "rule": "The terms 'Acid' and 'Base' are not defined in simple words.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:34:39.715314+00:00",
+            "last_seen": "2026-11-15T06:34:39.715314+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What are Acids and Bases?",
+            "criterion": "jargon_explanation",
+            "rule": "Explain the terms 'Acid' and 'Base' in simple words at their first use.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:34:47.391537+00:00",
+            "last_seen": "2026-11-15T06:34:47.391537+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "core",
+            "subtopic_title": "How Acids and Bases React",
+            "criterion": "jargon_explanation",
+            "rule": "Define 'neutralization' in simple words, such as 'a reaction where an acid and a base cancel each other out'.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:35:03.367584+00:00",
+            "last_seen": "2026-11-15T06:35:03.367584+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "core",
+            "subtopic_title": "How Acids and Bases React",
+            "criterion": "jargon_explanation",
+            "rule": "The term 'neutralization' is used but the explanation is not in simple words.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:35:12.246395+00:00",
+            "last_seen": "2026-11-15T06:35:12.246395+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "wrap-up",
+            "subtopic_title": "Summary and Next Steps",
+            "criterion": "required_coverage",
+            "rule": "Explain that salts are formed when acids and bases react together.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:41:16.926661+00:00",
+            "last_seen": "2026-11-15T06:41:16.926661+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "wrap-up",
+            "subtopic_title": "Summary and Next Steps",
+            "criterion": "jargon_explanation",
+            "rule": "Explain that neutralization is the name of the reaction where an acid and a base cancel each other out.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:41:16.927704+00:00",
+            "last_seen": "2026-11-15T06:41:16.927704+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "wrap-up",
+            "subtopic_title": "Summary and Next Steps",
+            "criterion": "example_quality",
+            "rule": "Use the lemon, soap, and baking soda examples to explain acids, bases, and their reaction.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:41:16.927704+00:00",
+            "last_seen": "2026-11-15T06:41:16.927704+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "wrap-up",
+            "subtopic_title": "Summary and Next Steps",
+            "criterion": "required_coverage",
+            "rule": "Explain that the reaction between acids and bases is called neutralization.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:41:24.930677+00:00",
+            "last_seen": "2026-11-15T06:41:24.930677+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "wrap-up",
+            "subtopic_title": "Summary and Next Steps",
+            "criterion": "jargon_explanation",
+            "rule": "Explain that neutralization is the name of the reaction between acids and bases.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:41:24.930677+00:00",
+            "last_seen": "2026-11-15T06:41:24.930677+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "wrap-up",
+            "subtopic_title": "Summary and Next Steps",
+            "criterion": "example_quality",
+            "rule": "Provide a concrete example of a salt, such as table salt or baking soda, and explain how it is used.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:41:24.931687+00:00",
+            "last_seen": "2026-11-15T06:41:24.931687+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "wrap-up",
+            "subtopic_title": "Summary and Next Steps",
+            "criterion": "required_coverage",
+            "rule": "Explain that the result of the reaction between an acid and a base is a salt.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:41:34.641761+00:00",
+            "last_seen": "2026-11-15T06:41:34.641761+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "wrap-up",
+            "subtopic_title": "Summary and Next Steps",
+            "criterion": "jargon_explanation",
+            "rule": "Explain that neutralization is the process where an acid and a base cancel each other out.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:41:34.641761+00:00",
+            "last_seen": "2026-11-15T06:41:34.641761+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "wrap-up",
+            "subtopic_title": "Summary and Next Steps",
+            "criterion": "example_quality",
+            "rule": "Explain that vinegar and baking soda react to form a salt.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:41:34.642840+00:00",
+            "last_seen": "2026-11-15T06:41:34.642840+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What are Acids and Bases?",
+            "criterion": "jargon_explanation",
+            "rule": "The terms 'Acid' and 'Base' are not defined in simple words. Add a definition like 'An Acid is a substance that tastes sour and can burn the skin.'",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:50:14.634033+00:00",
+            "last_seen": "2026-11-15T06:50:14.634033+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What are Acids and Bases?",
+            "criterion": "jargon_explanation",
+            "rule": "Define 'Acid' and 'Base' in simple words at their first use, for example: 'Acid (a substance that tastes sour and can burn the skin).'",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:50:23.747423+00:00",
+            "last_seen": "2026-11-15T06:50:23.747423+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What are Acids and Bases?",
+            "criterion": "required_coverage",
+            "rule": "The content mentions 'cleaning products' but does not explain that baking soda is a base, which is a required concept.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:50:33.271779+00:00",
+            "last_seen": "2026-11-15T06:50:33.272770+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What are Acids and Bases?",
+            "criterion": "jargon_explanation",
+            "rule": "The term 'Acid' is not defined in simple words; it is just a label.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:50:33.272770+00:00",
+            "last_seen": "2026-11-15T06:50:33.272770+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "core",
+            "subtopic_title": "Testing Acids and Bases",
+            "criterion": "required_coverage",
+            "rule": "Explain the specific color changes: litmus paper turns red in acids and blue in bases.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:50:41.692335+00:00",
+            "last_seen": "2026-11-15T06:50:41.692335+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "core",
+            "subtopic_title": "Testing Acids and Bases",
+            "criterion": "jargon_explanation",
+            "rule": "The term 'Litmus paper' is not defined in the previously taught content. Define it in this section.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:50:52.416999+00:00",
+            "last_seen": "2026-11-15T06:50:52.416999+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "core",
+            "subtopic_title": "How Acids and Bases React",
+            "criterion": "beginner_friendly",
+            "rule": "Explain that 'cancel each other out' means the acid and base react to form a new, neutral substance (salt and water) rather than disappearing.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:51:14.846111+00:00",
+            "last_seen": "2026-11-15T06:51:14.846111+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "core",
+            "subtopic_title": "How Acids and Bases React",
+            "criterion": "simple_language",
+            "rule": "Replace the phrase 'cancel each other out' with a simpler explanation, such as 'they react to form a new, neutral substance.'",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:51:14.846111+00:00",
+            "last_seen": "2026-11-15T06:51:14.846111+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Salts in Daily Life",
+            "criterion": "required_coverage",
+            "rule": "Explain how salt helps keep food fresh, such as by stopping the growth of bacteria.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:51:34.301832+00:00",
+            "last_seen": "2026-11-15T06:51:34.301832+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Salts in Daily Life",
+            "criterion": "jargon_explanation",
+            "rule": "Explain what 'preservation' means in this context, such as 'keeping food fresh for a long time'.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:51:34.302735+00:00",
+            "last_seen": "2026-11-15T06:51:34.302735+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Salts in Daily Life",
+            "criterion": "example_quality",
+            "rule": "Provide a concrete example, such as 'We use salt to clean the kitchen sink.'",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:51:34.302735+00:00",
+            "last_seen": "2026-11-15T06:51:34.302735+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Salts in Daily Life",
+            "criterion": "required_coverage",
+            "rule": "The content does not explain that salts are important for the human body.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:51:43.623862+00:00",
+            "last_seen": "2026-11-15T06:51:43.623862+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Salts in Daily Life",
+            "criterion": "jargon_explanation",
+            "rule": "The term 'preservation' is not explained in this content.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:51:43.624862+00:00",
+            "last_seen": "2026-11-15T06:51:43.624862+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Salts in Daily Life",
+            "criterion": "example_quality",
+            "rule": "The example is too general. It does not show a concrete, step-by-step use of salt in daily life.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:51:43.624862+00:00",
+            "last_seen": "2026-11-15T06:51:43.624862+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Salts in Daily Life",
+            "criterion": "required_coverage",
+            "rule": "Explain how salts are used in medicines, for example, by mentioning that they help balance body fluids or are used in antacids.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:51:54.490209+00:00",
+            "last_seen": "2026-11-15T06:51:54.490209+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Salts in Daily Life",
+            "criterion": "jargon_explanation",
+            "rule": "Explain the term 'preservation' in simple words, such as 'keeping food fresh for a long time'.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:51:54.490209+00:00",
+            "last_seen": "2026-11-15T06:51:54.490209+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Salts in Daily Life",
+            "criterion": "example_quality",
+            "rule": "Create a step-by-step example that shows how table salt is used in food, toothpaste, and cleaning the kitchen.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T06:51:54.490209+00:00",
+            "last_seen": "2026-11-15T06:51:54.490209+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What are Acids and Bases?",
+            "criterion": "beginner_friendly",
+            "rule": "Change 'burn the skin' to 'can be harmful' to avoid scaring the student.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:07:38.207190+00:00",
+            "last_seen": "2026-11-15T07:07:38.207190+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What are Acids and Bases?",
+            "criterion": "simple_language",
+            "rule": "Change 'A **Base**' to 'A Base' to remove the unnecessary bolding.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:07:38.208744+00:00",
+            "last_seen": "2026-11-15T07:07:38.208744+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What are Acids and Bases?",
+            "criterion": "jargon_explanation",
+            "rule": "Remove the bolding from 'Acid' and 'Base' as they are not technical terms.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:07:38.208744+00:00",
+            "last_seen": "2026-11-15T07:07:38.208744+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What are Acids and Bases?",
+            "criterion": "required_coverage",
+            "rule": "Explain that bases can also be corrosive and that the slippery feel is a key feature of a base.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:07:51.006435+00:00",
+            "last_seen": "2026-11-15T07:07:51.006435+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What are Acids and Bases?",
+            "criterion": "beginner_friendly",
+            "rule": "Remove the instructions to taste or touch the substances, as this is unsafe.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:07:51.007509+00:00",
+            "last_seen": "2026-11-15T07:07:51.007509+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What are Acids and Bases?",
+            "criterion": "simple_language",
+            "rule": "Break the long sentence into two shorter sentences.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:07:51.007509+00:00",
+            "last_seen": "2026-11-15T07:07:51.007509+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What are Acids and Bases?",
+            "criterion": "jargon_explanation",
+            "rule": "Define 'Acid' and 'Base' in simple words at their first use.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:07:51.007509+00:00",
+            "last_seen": "2026-11-15T07:07:51.007509+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What are Acids and Bases?",
+            "criterion": "simple_language",
+            "rule": "Replace 'corrosive' with a simpler word like 'harmful' or 'damaging'.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:08:03.187821+00:00",
+            "last_seen": "2026-11-15T07:08:03.187821+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What are Acids and Bases?",
+            "criterion": "jargon_explanation",
+            "rule": "Explain the word 'corrosive' in simple words, such as 'it can damage things'.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:08:03.188879+00:00",
+            "last_seen": "2026-11-15T07:08:03.188879+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Acids, Bases, and Salts",
+            "criterion": "beginner_friendly",
+            "rule": "The definition of 'road safety' is too technical and complex for a 12th-grade student with limited English. Use a simpler explanation like 'keeping roads safe for driving'.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:10:00.435241+00:00",
+            "last_seen": "2026-11-15T07:10:00.435241+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Acids, Bases, and Salts",
+            "criterion": "simple_language",
+            "rule": "The definition of 'road safety' is too long and complex. Use a simpler explanation like 'keeping roads safe for driving'.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:10:00.435241+00:00",
+            "last_seen": "2026-11-15T07:10:00.435241+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Acids, Bases, and Salts",
+            "criterion": "jargon_explanation",
+            "rule": "The term 'road safety' is not explained in simple words. Use a simpler explanation like 'keeping roads safe for driving'.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:10:00.435241+00:00",
+            "last_seen": "2026-11-15T07:10:00.435241+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Acids, Bases, and Salts",
+            "criterion": "required_coverage",
+            "rule": "Explain how acids are used in food preservation. Explain how bases are used in making soap. Explain how salts are used for road safety in winter.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:10:11.701221+00:00",
+            "last_seen": "2026-11-15T07:10:11.701221+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Acids, Bases, and Salts",
+            "criterion": "simple_language",
+            "rule": "Rewrite the definitions to be simpler. For example, 'Cleaning is making something clean.'",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:10:11.702220+00:00",
+            "last_seen": "2026-11-15T07:10:11.702220+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Acids, Bases, and Salts",
+            "criterion": "jargon_explanation",
+            "rule": "Explain the key terms 'Cleaning', 'Food', and 'Road safety' in simple words.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:10:11.702220+00:00",
+            "last_seen": "2026-11-15T07:10:11.702220+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Acids, Bases, and Salts",
+            "criterion": "example_quality",
+            "rule": "Provide a concrete, step-by-step example that matches the subtopic, such as using vinegar to clean a glass, soap to wash hands, and salt to melt ice on a road.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:10:11.703215+00:00",
+            "last_seen": "2026-11-15T07:10:11.703215+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Acids, Bases, and Salts",
+            "criterion": "simple_language",
+            "rule": "Replace 'cleaning agent' with 'substance used to clean things' to keep the sentence under 25 words.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:10:27.471035+00:00",
+            "last_seen": "2026-11-15T07:10:27.471035+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Acids, Bases, and Salts",
+            "criterion": "jargon_explanation",
+            "rule": "Explain 'cleaning agent' in simple words, such as 'a substance used to clean things'.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:10:27.471035+00:00",
+            "last_seen": "2026-11-15T07:10:27.471035+00:00"
+        },
+        {
+            "topic": "Acids, Bases, and Salts",
+            "subtopic_type": "application",
+            "subtopic_title": "Uses of Acids, Bases, and Salts",
+            "criterion": "example_quality",
+            "rule": "The example is a list of actions without a clear connection to the main idea. Explain how these actions demonstrate the uses of acids, bases, and salts.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T07:10:27.472040+00:00",
+            "last_seen": "2026-11-15T07:10:27.472040+00:00"
         }
     ]
 }
