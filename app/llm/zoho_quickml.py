@@ -1,10 +1,12 @@
 
 import os
 import json
-from typing import Any
+import threading
+from pathlib import Path
+from typing import Any, ClassVar
 
 import requests
-from dotenv import load_dotenv
+from dotenv import load_dotenv, set_key
 from pydantic import ConfigDict, SecretStr
 
 from langchain_core.language_models.chat_models import BaseChatModel
@@ -48,6 +50,9 @@ class ZohoQuickMLChat(BaseChatModel):
     environment: str = "Development"
 
     request_timeout: float = 60.0
+
+    # Shared lock across instances
+    _token_refresh_lock: ClassVar[threading.Lock] = threading.Lock()
 
     # -----------------------------------------
     # 1. LangChain Model Identification
@@ -164,7 +169,89 @@ class ZohoQuickMLChat(BaseChatModel):
             ) from exc
 
     # -----------------------------------------
-    # 6. HTTP Request to Zoho
+    # 6. Refresh Zoho Access Token
+    # -----------------------------------------
+
+    def _refresh_access_token(self) -> str:
+        """
+        Generate a new Zoho access token using the refresh token.
+        Update the running application and project .env file.
+        """
+
+        with self._token_refresh_lock:
+
+            refresh_token = os.getenv("ZOHO_REFRESH_TOKEN")
+            client_id = os.getenv("ZOHO_CLIENT_ID")
+            client_secret = os.getenv("ZOHO_CLIENT_SECRET")
+
+            oauth_url = os.getenv(
+                "ZOHO_OAUTH_URL",
+                "https://accounts.zoho.in/oauth/v2/token"
+            )
+
+            if not all([
+                refresh_token,
+                client_id,
+                client_secret
+            ]):
+                raise RuntimeError(
+                    "Zoho OAuth refresh configuration is incomplete."
+                )
+
+            try:
+
+                response = requests.post(
+                    oauth_url,
+                    data={
+                        "grant_type": "refresh_token",
+                        "refresh_token": refresh_token,
+                        "client_id": client_id,
+                        "client_secret": client_secret
+                    },
+                    timeout=self.request_timeout
+                )
+
+                response.raise_for_status()
+
+                token_data = response.json()
+
+                new_access_token = token_data.get("access_token")
+
+                if not new_access_token:
+                    raise RuntimeError(
+                        "Zoho did not return an access token."
+                    )
+
+                # Find project root .env file
+                env_path = Path(__file__).resolve().parents[2] / ".env"
+
+                # Update .env without overwriting other variables
+                set_key(
+                    str(env_path),
+                    "ZOHO_ACCESS_TOKEN",
+                    new_access_token
+                )
+
+                # Update running process
+                os.environ["ZOHO_ACCESS_TOKEN"] = new_access_token
+
+                # IMPORTANT: Keep the field as SecretStr
+                self.access_token = SecretStr(new_access_token)
+
+                print(
+                    "[ZOHO AUTH] Access token refreshed successfully."
+                )
+
+                return new_access_token
+
+            except requests.exceptions.RequestException as exc:
+
+                raise RuntimeError(
+                    f"Unable to refresh Zoho access token: {exc}"
+                ) from exc
+
+    # -----------------------------------------
+    # 7. HTTP Request to Zoho
     # -----------------------------------------
 
     def _call_zoho(
@@ -186,6 +273,25 @@ class ZohoQuickMLChat(BaseChatModel):
                 timeout=self.request_timeout
             )
 
+            # Access token expired or invalid
+            if response.status_code == 401:
+
+                print(
+                    "[ZOHO AUTH] Access token expired. Refreshing..."
+                )
+
+                self._refresh_access_token()
+
+                # Retry original request once with new token
+                response = requests.post(
+                    self.url,
+                    headers=self._get_headers(),
+                    json=payload,
+                    timeout=self.request_timeout
+                )
+
+                print("[ZOHO AUTH] Retried request with new token.")
+
             response.raise_for_status()
 
             return response.json()
@@ -202,11 +308,18 @@ class ZohoQuickMLChat(BaseChatModel):
             status_code = exc.response.status_code
 
             if "MORE_THAN_MAX_LENGTH" in error_body:
+
                 raise ZohoRequestTooLargeError(
-                    "Zoho rejected the prompt because it exceeds the "
-                    "endpoint's maximum input length. Reduce previous-section "
-                    "context, source facts, memory rules, or revision text. "
+                    "Zoho rejected the prompt because it exceeds "
+                    "the endpoint's maximum input length. "
                     f"HTTP {status_code}: {error_body}"
+                ) from exc
+
+            if status_code == 401:
+
+                raise RuntimeError(
+                    "Zoho authentication failed even after "
+                    "refreshing the access token. Check OAuth credentials."
                 ) from exc
 
             raise RuntimeError(
@@ -233,7 +346,7 @@ class ZohoQuickMLChat(BaseChatModel):
             ) from exc
 
     # -----------------------------------------
-    # 7. LangChain Generation
+    # 8. LangChain Generation
     # -----------------------------------------
 
     def _generate(
@@ -250,12 +363,18 @@ class ZohoQuickMLChat(BaseChatModel):
                 "this adapter yet."
             )
 
-        # Build request and report its size without logging prompt contents.
+        # Build request and report size without logging prompt contents
         payload = self._build_payload(messages)
+
         prompt_chars = len(payload["prompt"])
+
         payload_bytes = len(
-            json.dumps(payload, ensure_ascii=False).encode("utf-8")
+            json.dumps(
+                payload,
+                ensure_ascii=False
+            ).encode("utf-8")
         )
+
         print(
             f"[ZOHO REQUEST] prompt_chars={prompt_chars:,}, "
             f"payload_bytes={payload_bytes:,}"

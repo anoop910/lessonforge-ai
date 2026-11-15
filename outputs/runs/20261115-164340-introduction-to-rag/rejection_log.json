@@ -1,0 +1,46 @@
+[
+  {
+    "run_id": "20261115-164340-introduction-to-rag",
+    "subtopic_id": "S1",
+    "subtopic_title": "What is RAG?",
+    "attempt": 1,
+    "failed_criteria": [
+      "simple_language",
+      "jargon_explanation"
+    ],
+    "reasons": [
+      "[simple_language] Change 'This process makes the answer more useful and correct' to 'This makes the answer more useful and correct'.",
+      "[jargon_explanation] Define 'Retrieval-Augmented Generation' in simple words at its first use."
+    ],
+    "changes_requested_on_retry": [
+      "[simple_language] Change 'This process makes the answer more useful and correct' to 'This makes the answer more useful and correct'.",
+      "[jargon_explanation] Define 'Retrieval-Augmented Generation' in simple words at its first use."
+    ],
+    "words_before_retry": 294,
+    "retry_result": "FAILED again: simple_language, jargon_explanation",
+    "rejected_content": "**Retrieval-Augmented Generation (RAG)** is a method that helps an AI answer questions using new information. It works by first finding the right data and then using that data to make the answer. This is different from a normal AI that only uses what it learned during training. It is like giving the AI a book to read before it answers a question. This process makes the answer more useful and correct.\n\nIt combines a search engine with an AI to answer questions using specific, up-to-date information. The search engine looks for the latest facts on the internet. The AI then uses these facts to write the answer. This is very helpful for questions that change often. For example, if you ask about the price of a stock today, the search engine finds the new price. The AI then uses that price to answer you. This mix of search and AI makes the answer very current.\n\nIt helps the AI give accurate answers instead of guessing or using old data. Without RAG, the AI might just guess the answer. It might also use data that is no longer true. RAG stops this by checking the facts first. It makes sure the answer is based on real, current information. This makes the AI more reliable for you to use.\n\nImagine you are a student in an exam. You have a question about a specific chapter in your textbook. You do not just use your memory to answer. Instead, you open the book and read the chapter first. You use the information in the chapter to write your answer. This is exactly what RAG does for an AI. It reads the specific information before it answers. This shows that RAG helps the AI use the right facts.",
+    "words_after_retry": 293
+  },
+  {
+    "run_id": "20261115-164340-introduction-to-rag",
+    "subtopic_id": "S1",
+    "subtopic_title": "What is RAG?",
+    "attempt": 2,
+    "failed_criteria": [
+      "simple_language",
+      "jargon_explanation"
+    ],
+    "reasons": [
+      "[simple_language] Change 'mix of search and AI' to 'combination of a search engine and an AI'.",
+      "[jargon_explanation] Explain what a 'search engine' is in simple words."
+    ],
+    "changes_requested_on_retry": [
+      "[simple_language] Change 'mix of search and AI' to 'combination of a search engine and an AI'.",
+      "[jargon_explanation] Explain what a 'search engine' is in simple words."
+    ],
+    "words_before_retry": 293,
+    "retry_result": "PASSED",
+    "rejected_content": "**Retrieval-Augmented Generation (RAG)** is a method that helps an AI answer questions using new information. It works by first finding the right data and then using that data to make the answer. This is different from a normal AI that only uses what it learned during training. It is like giving the AI a book to read before it answers a question. This makes the answer more useful and correct.\n\nIt combines a search engine with an AI to answer questions using specific, up-to-date information. The search engine looks for the latest facts on the internet. The AI then uses these facts to write the answer. This is very helpful for questions that change often. For example, if you ask about the price of a stock today, the search engine finds the new price. The AI then uses that price to answer you. This mix of search and AI makes the answer very current.\n\nIt helps the AI give accurate answers instead of guessing or using old data. Without RAG, the AI might just guess the answer. It might also use data that is no longer true. RAG stops this by checking the facts first. It makes sure the answer is based on real, current information. This makes the AI more reliable for you to use.\n\nImagine you are a student in an exam. You have a question about a specific chapter in your textbook. You do not just use your memory to answer. Instead, you open the book and read the chapter first. You use the information in the chapter to write your answer. This is exactly what RAG does for an AI. It reads the specific information before it answers. This shows that RAG helps the AI use the right facts.",
+    "words_after_retry": 307
+  }
+]

@@ -1,0 +1,61 @@
+[
+  {
+    "run_id": "20261115-221917-introduction-to-rag",
+    "subtopic_id": "S9",
+    "subtopic_title": "Real-World Example: Research Assistant",
+    "attempt": 1,
+    "failed_criteria": [
+      "accuracy",
+      "example_quality"
+    ],
+    "reasons": [
+      "[accuracy] Clarify that RAG retrieves specific data points and summarizes content, rather than 'finding answers to questions' which implies a higher level of reasoning.",
+      "[example_quality] Replace the manual highlighter example with a concrete, step-by-step example of how an AI system would use RAG to summarize a long research paper."
+    ],
+    "changes_requested_on_retry": [
+      "[accuracy] Clarify that RAG retrieves specific data points and summarizes content, rather than 'finding answers to questions' which implies a higher level of reasoning.",
+      "[example_quality] Replace the manual highlighter example with a concrete, step-by-step example of how an AI system would use RAG to summarize a long research paper."
+    ],
+    "words_before_retry": 255,
+    "retry_result": "FAILED again: example_quality",
+    "rejected_content": "Researchers use RAG to summarize long documents and find specific data points. A long document is a file with many pages. RAG reads this file and finds the most important parts. It then writes a short summary of those parts. This helps the researcher see the main ideas without reading every word.\n\nIt helps them quickly understand the content of many papers or reports. A report is a document that gives information about a topic. Researchers often have to read many reports at once. RAG can read these reports and find the answers to questions. This makes it much easier to understand the information.\n\nIt saves time by automating the initial reading and summarization process. The \"initial reading\" is the first time you look at a document. RAG can do this reading automatically. It does not need a person to read the whole document. This saves the researcher a lot of time.\n\nHere is an example of how this works. Imagine a student has a long research paper. The paper is about the history of India. The student wants to know about the British rule. The student uses a highlighter to mark the important parts.\n\n1. The student reads the paper and highlights the parts about the British rule.\n2. The student collects all the highlighted parts.\n3. The student puts the highlighted parts into a pile.\n4. The student reads the pile to understand the main points.\n\nThis shows how a student can use a highlighter to find important information in a long paper.",
+    "words_after_retry": 255
+  },
+  {
+    "run_id": "20261115-221917-introduction-to-rag",
+    "subtopic_id": "S9",
+    "subtopic_title": "Real-World Example: Research Assistant",
+    "attempt": 2,
+    "failed_criteria": [
+      "example_quality"
+    ],
+    "reasons": [
+      "[example_quality] The example describes a manual process (using a highlighter) rather than how RAG works. It must show the AI retrieving and summarizing the information."
+    ],
+    "changes_requested_on_retry": [
+      "[example_quality] The example describes a manual process (using a highlighter) rather than how RAG works. It must show the AI retrieving and summarizing the information."
+    ],
+    "words_before_retry": 255,
+    "retry_result": "FAILED again: example_quality",
+    "rejected_content": "Researchers use RAG to summarize long documents and find specific data points. A long document is a file with many pages. RAG reads this file and finds the most important parts. It then writes a short summary of those parts. This helps the researcher see the main ideas without reading every word.\n\nIt helps them quickly understand the content of many papers or reports. A report is a document that gives information about a topic. Researchers often have to read many reports at once. RAG can read these reports and find the specific data points. This makes it much easier to understand the information.\n\nIt saves time by automating the initial reading and summarization process. The \"initial reading\" is the first time you look at a document. RAG can do this reading automatically. It does not need a person to read the whole document. This saves the researcher a lot of time.\n\nHere is an example of how this works. Imagine a student has a long research paper. The paper is about the history of India. The student wants to know about the British rule. The student uses a highlighter to mark the important parts.\n\n1. The student reads the paper and highlights the parts about the British rule.\n2. The student collects all the highlighted parts.\n3. The student puts the highlighted parts into a pile.\n4. The student reads the pile to understand the main points.\n\nThis shows how a student can use a highlighter to find important information in a long paper.",
+    "words_after_retry": 247
+  },
+  {
+    "run_id": "20261115-221917-introduction-to-rag",
+    "subtopic_id": "S9",
+    "subtopic_title": "Real-World Example: Research Assistant",
+    "attempt": 3,
+    "failed_criteria": [
+      "example_quality"
+    ],
+    "reasons": [
+      "[example_quality] The example describes a manual process (highlighting) rather than how RAG works. It must show the AI retrieving and summarizing the information."
+    ],
+    "changes_requested_on_retry": [
+      "[example_quality] The example describes a manual process (highlighting) rather than how RAG works. It must show the AI retrieving and summarizing the information."
+    ],
+    "words_before_retry": 247,
+    "retry_result": "no retry left",
+    "rejected_content": "Researchers use RAG to summarize long documents and find specific data points. A long document is a file with many pages. RAG reads this file and finds the most important parts. It then writes a short summary of those parts. This helps the researcher see the main ideas without reading every word.\n\nIt helps them quickly understand the content of many papers or reports. A report is a document that gives information about a topic. Researchers often have to read many reports at once. RAG can read these reports and find the specific data points. This makes it much easier to understand the information.\n\nIt saves time by automating the initial reading and summarization process. The \"initial reading\" is the first time you look at a document. RAG can do this reading automatically. It does not need a person to read the whole document. This saves the researcher a lot of time.\n\nImagine a student has a long research paper. The paper is about the history of India. The student wants to know about the British rule. The student uses a highlighter to mark the important parts.\n\n1. The student reads the paper and highlights the parts about the British rule.\n2. The student collects all the highlighted parts.\n3. The student puts the highlighted parts into a pile.\n4. The student reads the pile to understand the main points.\n\nThis shows how a student can use a highlighter to find important information in a long paper."
+  }
+]

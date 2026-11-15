@@ -2,12 +2,19 @@
 from langchain_core.exceptions import OutputParserException
 from langchain_core.messages import HumanMessage
 
-from app.llm.zoho_quickml import ZohoQuickMLChat
+from app.llm.zoho_quickml import ZohoQuickMLChat, ZohoRequestTooLargeError
 from app.agents.schemas import LessonPlan
 from app.prompts.generator_prompt import (
     GENERATOR_PROMPT,
     parser
 )
+
+
+def _clip(text: str, limit: int) -> str:
+    text = (text or "").strip()
+    if len(text) <= limit:
+        return text
+    return text[:limit].rsplit(" ", 1)[0] + " ...[context shortened]"
 
 
 class LessonPlanner:
@@ -38,6 +45,11 @@ class LessonPlanner:
                 "min_subtopics cannot exceed max_subtopics"
             )
 
+        # Keep user-provided context bounded. Lesson duration and requested
+        # section count remain unchanged; these limits only affect prompt text.
+        requested_topic = topic
+        learner_profile = _clip(learner_profile, 600)
+
         prompt_values = {
             "topic": topic,
             "learner_profile": learner_profile,
@@ -47,9 +59,10 @@ class LessonPlanner:
             "format_instructions": parser.get_format_instructions()
         }
 
-        messages = GENERATOR_PROMPT.format_messages(
+        base_messages = GENERATOR_PROMPT.format_messages(
             **prompt_values
         )
+        messages = base_messages
 
         for attempt in range(self.MAX_RETRIES + 1):
 
@@ -62,9 +75,9 @@ class LessonPlanner:
                 plan = parser.parse(response.content)
 
                 # Validate requested topic
-                if plan.topic.strip().casefold() != topic.strip().casefold():
+                if plan.topic.strip().casefold() != requested_topic.strip().casefold():
                     raise ValueError(
-                        f"Wrong topic: expected '{topic}', "
+                        f"Wrong topic: expected '{requested_topic}', "
                         f"received '{plan.topic}'"
                     )
 
@@ -82,6 +95,11 @@ class LessonPlanner:
 
                 return plan
 
+            except ZohoRequestTooLargeError:
+                # A repeated identical oversized request cannot succeed.
+                # Do not consume the planner's quality-retry budget.
+                raise
+
             except (OutputParserException, ValueError) as error:
 
                 print("Lesson plan validation: FAILED")
@@ -93,30 +111,21 @@ class LessonPlanner:
                         "maximum retries."
                     ) from error
 
-                messages.extend([
-                    response if "response" in locals() else HumanMessage(
-                        content="No previous response available."
-                    ),
+                # Rebuild from the original prompt each time. Do NOT append
+                # the previous full plan: its size grows with section count
+                # and made later retry requests much larger.
+                messages = base_messages + [
                     HumanMessage(
-                        content=f"""
-Your previous lesson plan failed validation.
-
-Original topic: {topic}
-
-Validation error:
-{str(error)}
-
-Correct the lesson plan.
-
-Requirements:
-- Follow the exact requested topic.
-- Include every required JSON field.
-- Follow the subtopic count limits.
-- Use all four required subtopic types.
-- Ensure dependencies refer only to earlier subtopics.
-- Return only valid JSON.
-"""
+                        content=(
+                            "The previous plan did not pass validation. "
+                            "Correct it using this brief issue: "
+                            f"{_clip(str(error), 350)}. "
+                            "Keep the exact topic and requested subtopic "
+                            "count range, include all four required types, "
+                            "use earlier IDs only in builds_on, and return "
+                            "valid JSON only."
+                        )
                     )
-                ])
+                ]
 
         raise RuntimeError("Unexpected lesson planning failure.")

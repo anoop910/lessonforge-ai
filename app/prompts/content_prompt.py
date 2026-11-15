@@ -51,7 +51,7 @@ If no source facts are given, use only facts you are fully sure about.
 1. Start with one or two sentences that tell the learner what this
    section will help them do. Link to the earlier section if there is one.
 2. Then cover the must_teach points one by one, in order.
-   Give each point its own short paragraph (2 to 4 sentences).
+   Give each point its own  paragraph (5 to 8 sentences).
    Begin each paragraph with one clear, direct sentence that states the
    point. Then explain it with everyday words.
 3. Then give ONE concrete example, based on example_idea.

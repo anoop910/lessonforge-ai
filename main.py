@@ -208,7 +208,7 @@ def main():
 
     lesson = workflow.run(
 
-        topic="Acids, Bases, and Salts",
+        topic="Magnetic Effects of Electric Current",
 
         learner_profile=(
             "Indian 12th-grade student, "

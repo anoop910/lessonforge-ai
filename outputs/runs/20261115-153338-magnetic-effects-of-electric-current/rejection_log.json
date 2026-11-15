@@ -1,0 +1,77 @@
+[
+  {
+    "run_id": "20261115-153338-magnetic-effects-of-electric-current",
+    "subtopic_id": "S1",
+    "subtopic_title": "What is the Magnetic Effect of Electric Current?",
+    "attempt": 1,
+    "failed_criteria": [
+      "jargon_explanation"
+    ],
+    "reasons": [
+      "[jargon_explanation] The terms 'magnet' and 'magnetic field' are not defined in simple words at their first use. Define them before using them in the text."
+    ],
+    "changes_requested_on_retry": [
+      "[jargon_explanation] The terms 'magnet' and 'magnetic field' are not defined in simple words at their first use. Define them before using them in the text."
+    ],
+    "words_before_retry": 264,
+    "retry_result": "FAILED again: jargon_explanation",
+    "rejected_content": "Electric current flowing through a wire creates a magnetic field around it. Think of a wire as a long, thin line. When you turn on a switch, electricity moves through this line. This moving electricity makes a special force around the wire. This force is what we call a magnetic field.\n\nScientists call this the magnetic effect of electric current. This name tells us that electricity can act like a magnet. It is a very common thing in the world. We see it in many machines and tools. It is a basic rule of how electricity works.\n\nIt is the basic principle behind many electrical devices like electromagnets and electric bells. An electromagnet is a special type of magnet. It uses electricity to become a magnet. An electric bell also uses this effect to make a sound. These devices work because of the magnetic effect.\n\nA **magnet** is an object that pulls some metals toward it. A **magnetic field** is the area around a magnet where this pull happens. Now, let us see how this works with a wire.\n\nImagine a compass needle moving when placed near a wire connected to a battery, showing the invisible magnetic field.\n\n1. Take a wire and connect it to a battery.\n2. Place a small compass on a table near the wire.\n3. Turn on the battery to let the current flow.\n4. Watch the compass needle. It will move.\n5. The needle points in a new direction.\n6. This shows the magnetic field around the wire.\n\nThis example shows that the wire creates a magnetic field.",
+    "words_after_retry": 264
+  },
+  {
+    "run_id": "20261115-153338-magnetic-effects-of-electric-current",
+    "subtopic_id": "S1",
+    "subtopic_title": "What is the Magnetic Effect of Electric Current?",
+    "attempt": 2,
+    "failed_criteria": [
+      "jargon_explanation"
+    ],
+    "reasons": [
+      "[jargon_explanation] The terms 'magnet' and 'magnetic field' are not defined in the context of the subtopic. They are defined as general objects, not specifically in relation to the magnetic effect of electric current."
+    ],
+    "changes_requested_on_retry": [
+      "[jargon_explanation] The terms 'magnet' and 'magnetic field' are not defined in the context of the subtopic. They are defined as general objects, not specifically in relation to the magnetic effect of electric current."
+    ],
+    "words_before_retry": 264,
+    "retry_result": "FAILED again: jargon_explanation",
+    "rejected_content": "Electric current flowing through a wire creates a magnetic field around it. Think of a wire as a long, thin line. When you turn on a switch, electricity moves through this line. This moving electricity makes a special force around the wire. This force is what we call a magnetic field.\n\nScientists call this the magnetic effect of electric current. This name tells us that electricity can act like a magnet. It is a very common thing in the world. We see it in many machines and tools. It is a basic rule of how electricity works.\n\nIt is the basic principle behind many electrical devices like electromagnets and electric bells. An electromagnet is a special type of magnet. It uses electricity to become a magnet. An electric bell also uses this effect to make a sound. These devices work because of the magnetic effect.\n\nA **magnet** is an object that pulls some metals toward it. A **magnetic field** is the area around a magnet where this pull happens. Now, let us see how this works with a wire.\n\nImagine a compass needle moving when placed near a wire connected to a battery, showing the invisible magnetic field.\n\n1. Take a wire and connect it to a battery.\n2. Place a small compass on a table near the wire.\n3. Turn on the battery to let the current flow.\n4. Watch the compass needle. It will move.\n5. The needle points in a new direction.\n6. This shows the magnetic field around the wire.\n\nThis example shows that the wire creates a magnetic field.",
+    "words_after_retry": 285
+  },
+  {
+    "run_id": "20261115-153338-magnetic-effects-of-electric-current",
+    "subtopic_id": "S1",
+    "subtopic_title": "What is the Magnetic Effect of Electric Current?",
+    "attempt": 3,
+    "failed_criteria": [
+      "jargon_explanation"
+    ],
+    "reasons": [
+      "[jargon_explanation] The terms 'magnet' and 'magnetic field' are not defined in simple words at their first use. Define them before using them in the text."
+    ],
+    "changes_requested_on_retry": [
+      "[jargon_explanation] The terms 'magnet' and 'magnetic field' are not defined in simple words at their first use. Define them before using them in the text."
+    ],
+    "words_before_retry": 285,
+    "retry_result": "no retry left",
+    "rejected_content": "Electricity can create a magnetic force. This force is very useful in many machines.\n\nElectric current flowing through a wire creates a magnetic field around it. Think of a wire as a long, thin line. When you turn on a switch, electricity moves through this line. This moving electricity makes a special force around the wire. This force is what we call a magnetic field. It is invisible, but it is real.\n\nScientists call this the magnetic effect of electric current. This name tells us that electricity can act like a magnet. It is a very common thing in the world. We see it in many machines and tools. It is a basic rule of how electricity works.\n\nIt is the basic principle behind many electrical devices like electromagnets and electric bells. An electromagnet is a special type of magnet. It uses electricity to become a magnet. An electric bell also uses this effect to make a sound. These devices work because of the magnetic effect.\n\nA **magnet** is an object that pulls some metals toward it. A **magnetic field** is the area around a magnet where this pull happens. Now, let us see how this works with a wire.\n\nImagine a compass needle moving when placed near a wire connected to a battery, showing the invisible magnetic field.\n\n1. Take a wire and connect it to a battery.\n2. Place a small compass on a table near the wire.\n3. Turn on the battery to let the current flow.\n4. Watch the compass needle. It will move.\n5. The needle points in a new direction.\n6. This shows the magnetic field around the wire.\n\nThis example shows that the wire creates a magnetic field."
+  },
+  {
+    "run_id": "20261115-153338-magnetic-effects-of-electric-current",
+    "subtopic_id": "S3",
+    "subtopic_title": "Magnetic Field of a Current-Carrying Coil (Solenoid)",
+    "attempt": 1,
+    "failed_criteria": [
+      "jargon_explanation"
+    ],
+    "reasons": [
+      "[jargon_explanation] Define 'solenoid' in simple words, such as 'a long coil of wire' or 'a spring-like wire'."
+    ],
+    "changes_requested_on_retry": [
+      "[jargon_explanation] Define 'solenoid' in simple words, such as 'a long coil of wire' or 'a spring-like wire'."
+    ],
+    "words_before_retry": 287,
+    "retry_result": "PASSED",
+    "rejected_content": "In the previous section, we learned that a straight wire creates a magnetic field. Now, we will see what happens when we bend that wire into a coil. This helps us understand how strong magnets are made.\n\nA **solenoid** is a long coil of wire. It looks like a spring or a spiral staircase. When electricity flows through this coil, the magnetic fields of each loop add up. The fields from the loops join together to make a very strong field inside the coil.\n\nThe magnetic field inside a solenoid is very strong and uniform. This means the field is the same strength everywhere inside the tube. It is much stronger than the field from a single straight wire. This makes the solenoid very useful for making powerful magnets.\n\nThe magnetic field outside a solenoid is similar to that of a bar magnet. Outside the coil, the field lines go from one end to the other. This is exactly how a bar magnet works. So, the solenoid acts like a magnet with a north and a south pole.\n\nHere is a simple example to show how a solenoid works.\n\n1. Imagine a long wire is bent into a tight spiral shape.\n2. You connect this wire to a battery to let electricity flow.\n3. The electricity moves through the wire in one direction.\n4. The magnetic field of the first loop points in one way.\n5. The magnetic field of the second loop points in the same way.\n6. The fields of all the loops join together to make a strong field.\n7. This strong field acts like a magnet inside the coil.\n\nThis example shows how a coil of wire can act like a strong magnet.",
+    "words_after_retry": 287
+  }
+]

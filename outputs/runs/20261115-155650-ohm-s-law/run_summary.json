@@ -1,0 +1,46 @@
+{
+  "run_id": "20261115-155650-ohm-s-law",
+  "topic": "Ohm's law",
+  "created_at": "2026-11-15T10:28:27.420502+00:00",
+  "status": "passed",
+  "max_retries_per_subtopic": 2,
+  "sections": [
+    {
+      "id": "S1",
+      "title": "What is Ohm's Law?",
+      "status": "passed",
+      "attempts": 1,
+      "failed_criteria": []
+    },
+    {
+      "id": "S2",
+      "title": "The Formula and Its Parts",
+      "status": "passed",
+      "attempts": 1,
+      "failed_criteria": []
+    },
+    {
+      "id": "S3",
+      "title": "Calculating Current, Voltage, and Resistance",
+      "status": "passed",
+      "attempts": 1,
+      "failed_criteria": []
+    },
+    {
+      "id": "S4",
+      "title": "Real-World Application: A Light Bulb",
+      "status": "passed",
+      "attempts": 1,
+      "failed_criteria": []
+    },
+    {
+      "id": "S5",
+      "title": "Summary and Next Steps",
+      "status": "passed",
+      "attempts": 1,
+      "failed_criteria": []
+    }
+  ],
+  "total_rejections": 0,
+  "first_try_pass_rate": 1.0
+}

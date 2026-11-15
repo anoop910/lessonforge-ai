@@ -12,6 +12,10 @@ MAX_EXTRA_RULE_CHARS = 350
 MAX_PREVIOUS_DRAFT_CHARS = 2200
 MAX_REVISION_NOTES = 4
 MAX_REVISION_NOTE_CHARS = 350
+MAX_TOPIC_CHARS = 300
+MAX_LEARNER_PROFILE_CHARS = 600
+MAX_SUBTOPIC_PLAN_CHARS = 1800
+MAX_CHECKLIST_CHARS = 1800
 
 
 def _clip(text: str, limit: int) -> str:
@@ -138,14 +142,24 @@ class LessonContentGenerator:
         bounded_previous_content = _clip(
             previous_content, MAX_PREVIOUS_CONTEXT_CHARS
         )
+        # The plan JSON and checklist contain overlapping requirements.
+        # Keep both compact so large plans cannot inflate every section call.
+        compact_plan = subtopic.model_dump_json()
+        compact_checklist = build_checklist(
+            subtopic, bounded_previous_content
+        )
 
         text = self.chain.invoke({
-            "topic": topic,
-            "learner_profile": learner_profile,
-            "subtopic_json": subtopic.model_dump_json(indent=2),
-            "subtopic_title": subtopic.title,
-            "section_checklist": build_checklist(
-                subtopic, bounded_previous_content
+            "topic": _clip(topic, MAX_TOPIC_CHARS),
+            "learner_profile": _clip(
+                learner_profile, MAX_LEARNER_PROFILE_CHARS
+            ),
+            "subtopic_json": _clip(
+                compact_plan, MAX_SUBTOPIC_PLAN_CHARS
+            ),
+            "subtopic_title": _clip(subtopic.title, 250),
+            "section_checklist": _clip(
+                compact_checklist, MAX_CHECKLIST_CHARS
             ),
             "previous_content": bounded_previous_content or "None.",
             "source_facts": _format_bounded_items(

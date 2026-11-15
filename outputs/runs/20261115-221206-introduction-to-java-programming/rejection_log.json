@@ -1,0 +1,21 @@
+[
+  {
+    "run_id": "20261115-221206-introduction-to-java-programming",
+    "subtopic_id": "S2",
+    "subtopic_title": "The Main Parts of a Java Program",
+    "attempt": 1,
+    "failed_criteria": [
+      "simple_language"
+    ],
+    "reasons": [
+      "[simple_language] Replace 'data' with 'information' to make it easier to understand."
+    ],
+    "changes_requested_on_retry": [
+      "[simple_language] Replace 'data' with 'information' to make it easier to understand."
+    ],
+    "words_before_retry": 339,
+    "retry_result": "PASSED",
+    "rejected_content": "In the last section, you learned that Java is a set of rules to give instructions to a computer. Now, you will see how those rules are put together to make a working program.\n\nA Java program is made of blocks of code. Think of a program as a big box. Inside this box, we put smaller boxes. Each of these smaller boxes holds a specific set of instructions. These smaller boxes are called blocks of code. They help us organize the work the computer needs to do.\n\nThe first block is the class definition. A **class** is a container that holds all the data and instructions for a specific thing. It is like a blueprint for a house. The blueprint tells the builder what materials to use and how to put them together. In Java, the class definition is the first block you write. It sets the stage for the rest of the program.\n\nThe second block is the main method, which is the starting point. A **method** is a block of code that does a specific task. You can think of a method as a small tool in a toolbox. The main method is the most important tool. It is the first thing the computer runs when you start the program. It is the main door you enter to start the program.\n\nHere is a simple example to show how these parts work together. Imagine you want to make a program that says \"Hello\" to the world.\n\n1. You start by creating a class. You give it a name, like \"MyProgram\". This is the container.\n2. Inside this container, you write the main method. You give it the special name \"main\".\n3. You put a message inside the main method. The message is \"Hello World\".\n4. When you run the program, the computer looks for the main method.\n5. It enters the main method and shows the message \"Hello World\".\n\nThis example shows how a class holds the code and the main method is the starting point.",
+    "words_after_retry": 339
+  }
+]

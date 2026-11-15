@@ -1,0 +1,49 @@
+[
+  {
+    "run_id": "20261115-150505-magnetic-effects-of-electric-current",
+    "subtopic_id": "S1",
+    "subtopic_title": "What is the Magnetic Effect of Electric Current?",
+    "attempt": 1,
+    "failed_criteria": [
+      "simple_language",
+      "jargon_explanation"
+    ],
+    "reasons": [
+      "[simple_language] Replace the word 'phenomenon' with a simpler word like 'event' or 'effect'.",
+      "[jargon_explanation] Explain the term 'phenomenon' in simple words, such as 'a natural event'."
+    ],
+    "changes_requested_on_retry": [
+      "[simple_language] Replace the word 'phenomenon' with a simpler word like 'event' or 'effect'.",
+      "[jargon_explanation] Explain the term 'phenomenon' in simple words, such as 'a natural event'."
+    ],
+    "words_before_retry": 275,
+    "retry_result": "FAILED again: beginner_friendly, simple_language, jargon_explanation",
+    "rejected_content": "Electric current creates a magnetic field around it. An **electric current** is the flow of tiny charged particles through a wire. When this flow happens, it creates a magnetic field. A **magnetic field** is an invisible area of force around a magnet. This field can push or pull other magnetic objects. It is not visible to our eyes, but we can see its effects. This is a very useful property of electricity.\n\nThis phenomenon is called the magnetic effect of electric current. A **phenomenon** is a natural event or a happening that we can observe. Scientists call this specific effect the magnetic effect of electric current. It is a special way that electricity behaves. This effect is not just a theory; it is a real thing that happens. It connects the world of electricity to the world of magnetism. This connection is very important for technology.\n\nIt is the basic principle behind many electrical devices. Many common devices use this effect to work. For example, electric motors use it to spin. Speakers use it to make sound. The magnetic effect is the basic principle behind these devices. It is the starting point for their operation. Without this effect, these devices would not work. It is a fundamental rule of physics.\n\n**Example: Compass and a Wire**\n\n1. Take a wire and connect it to a battery.\n2. Place a compass on a table near the wire.\n3. The compass needle points north.\n4. Turn on the battery to start the current.\n5. The compass needle moves away from north.\n6. It points in a new direction.\n\nThis example shows the invisible magnetic field around the wire.",
+    "words_after_retry": 272
+  },
+  {
+    "run_id": "20261115-150505-magnetic-effects-of-electric-current",
+    "subtopic_id": "S1",
+    "subtopic_title": "What is the Magnetic Effect of Electric Current?",
+    "attempt": 2,
+    "failed_criteria": [
+      "beginner_friendly",
+      "simple_language",
+      "jargon_explanation"
+    ],
+    "reasons": [
+      "[beginner_friendly] The definition of a magnetic field uses the term 'magnet' which is not yet defined for the learner. Introduce the concept using a comparison to gravity or wind before defining it technically.",
+      "[simple_language] The sentence 'This phenomenon is called the magnetic effect of electric current' is 12 words long. Shorten it to 'Scientists call this the magnetic effect of electric current.'",
+      "[jargon_explanation] The term 'magnet' is used in the definition of 'magnetic field' but has not been defined. Define 'magnet' in simple words before using it."
+    ],
+    "changes_requested_on_retry": [
+      "[beginner_friendly] The definition of a magnetic field uses the term 'magnet' which is not yet defined for the learner. Introduce the concept using a comparison to gravity or wind before defining it technically.",
+      "[simple_language] The sentence 'This phenomenon is called the magnetic effect of electric current' is 12 words long. Shorten it to 'Scientists call this the magnetic effect of electric current.'",
+      "[jargon_explanation] The term 'magnet' is used in the definition of 'magnetic field' but has not been defined. Define 'magnet' in simple words before using it."
+    ],
+    "words_before_retry": 272,
+    "retry_result": "PASSED",
+    "rejected_content": "Electric current creates a magnetic field around it. An **electric current** is the flow of tiny charged particles through a wire. When this flow happens, it creates a magnetic field. A **magnetic field** is an invisible area of force around a magnet. This field can push or pull other magnetic objects. It is not visible to our eyes, but we can see its effects. This is a very useful property of electricity.\n\nThis phenomenon is called the magnetic effect of electric current. An **event** is a natural happening that we can observe. Scientists call this specific event the magnetic effect of electric current. It is a special way that electricity behaves. This effect is not just a theory; it is a real thing that happens. It connects the world of electricity to the world of magnetism. This connection is very important for technology.\n\nIt is the basic principle behind many electrical devices. Many common devices use this effect to work. For example, electric motors use it to spin. Speakers use it to make sound. The magnetic effect is the basic principle behind these devices. It is the starting point for their operation. Without this effect, these devices would not work. It is a fundamental rule of physics.\n\n**Example: Compass and a Wire**\n\n1. Take a wire and connect it to a battery.\n2. Place a compass on a table near the wire.\n3. The compass needle points north.\n4. Turn on the battery to start the current.\n5. The compass needle moves away from north.\n6. It points in a new direction.\n\nThis example shows the invisible magnetic field around the wire.",
+    "words_after_retry": 282
+  }
+]

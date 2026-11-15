@@ -590,6 +590,186 @@
             "occurrences": 1,
             "created_at": "2026-11-15T07:10:27.472040+00:00",
             "last_seen": "2026-11-15T07:10:27.472040+00:00"
+        },
+        {
+            "topic": "Magnetic Effects of Electric Current",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What is the Magnetic Effect of Electric Current?",
+            "criterion": "simple_language",
+            "rule": "Replace the word 'phenomenon' with a simpler word like 'event' or 'effect'.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T09:35:38.819998+00:00",
+            "last_seen": "2026-11-15T09:35:38.819998+00:00"
+        },
+        {
+            "topic": "Magnetic Effects of Electric Current",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What is the Magnetic Effect of Electric Current?",
+            "criterion": "jargon_explanation",
+            "rule": "Explain the term 'phenomenon' in simple words, such as 'a natural event'.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T09:35:38.821069+00:00",
+            "last_seen": "2026-11-15T09:35:38.821069+00:00"
+        },
+        {
+            "topic": "Magnetic Effects of Electric Current",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What is the Magnetic Effect of Electric Current?",
+            "criterion": "beginner_friendly",
+            "rule": "The definition of a magnetic field uses the term 'magnet' which is not yet defined for the learner. Introduce the concept using a comparison to gravity or wind before defining it technically.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T09:35:57.476422+00:00",
+            "last_seen": "2026-11-15T09:35:57.476422+00:00"
+        },
+        {
+            "topic": "Magnetic Effects of Electric Current",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What is the Magnetic Effect of Electric Current?",
+            "criterion": "simple_language",
+            "rule": "The sentence 'This phenomenon is called the magnetic effect of electric current' is 12 words long. Shorten it to 'Scientists call this the magnetic effect of electric current.'",
+            "occurrences": 1,
+            "created_at": "2026-11-15T09:35:57.477507+00:00",
+            "last_seen": "2026-11-15T09:35:57.477507+00:00"
+        },
+        {
+            "topic": "Magnetic Effects of Electric Current",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What is the Magnetic Effect of Electric Current?",
+            "criterion": "jargon_explanation",
+            "rule": "The term 'magnet' is used in the definition of 'magnetic field' but has not been defined. Define 'magnet' in simple words before using it.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T09:35:57.478430+00:00",
+            "last_seen": "2026-11-15T09:35:57.478430+00:00"
+        },
+        {
+            "topic": "Magnetic Effects of Electric Current",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What is the Magnetic Effect of Electric Current?",
+            "criterion": "jargon_explanation",
+            "rule": "The terms 'magnet' and 'magnetic field' are not defined in simple words at their first use. Define them before using them in the text.",
+            "occurrences": 2,
+            "created_at": "2026-11-15T10:04:11.589141+00:00",
+            "last_seen": "2026-11-15T10:04:43.545811+00:00"
+        },
+        {
+            "topic": "Magnetic Effects of Electric Current",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What is the Magnetic Effect of Electric Current?",
+            "criterion": "jargon_explanation",
+            "rule": "The terms 'magnet' and 'magnetic field' are not defined in the context of the subtopic. They are defined as general objects, not specifically in relation to the magnetic effect of electric current.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T10:04:27.269703+00:00",
+            "last_seen": "2026-11-15T10:04:27.269703+00:00"
+        },
+        {
+            "topic": "Magnetic Effects of Electric Current",
+            "subtopic_type": "core",
+            "subtopic_title": "Magnetic Field of a Current-Carrying Coil (Solenoid)",
+            "criterion": "jargon_explanation",
+            "rule": "Define 'solenoid' in simple words, such as 'a long coil of wire' or 'a spring-like wire'.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T10:05:07.292531+00:00",
+            "last_seen": "2026-11-15T10:05:07.292531+00:00"
+        },
+        {
+            "topic": "Ohm's law",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What is Ohm's Law?",
+            "criterion": "jargon_explanation",
+            "rule": "Explain 'electric charge' in simple words. Explain 'flow of charge' in simple words.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T10:23:37.762836+00:00",
+            "last_seen": "2026-11-15T10:23:37.762836+00:00"
+        },
+        {
+            "topic": "Introduction to RAG",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What is RAG?",
+            "criterion": "simple_language",
+            "rule": "Change 'This process makes the answer more useful and correct' to 'This makes the answer more useful and correct'.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T11:14:25.667142+00:00",
+            "last_seen": "2026-11-15T11:14:25.667142+00:00"
+        },
+        {
+            "topic": "Introduction to RAG",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What is RAG?",
+            "criterion": "jargon_explanation",
+            "rule": "Define 'Retrieval-Augmented Generation' in simple words at its first use.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T11:14:25.669145+00:00",
+            "last_seen": "2026-11-15T11:14:25.669145+00:00"
+        },
+        {
+            "topic": "Introduction to RAG",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What is RAG?",
+            "criterion": "simple_language",
+            "rule": "Change 'mix of search and AI' to 'combination of a search engine and an AI'.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T11:14:36.792734+00:00",
+            "last_seen": "2026-11-15T11:14:36.792734+00:00"
+        },
+        {
+            "topic": "Introduction to RAG",
+            "subtopic_type": "foundation",
+            "subtopic_title": "What is RAG?",
+            "criterion": "jargon_explanation",
+            "rule": "Explain what a 'search engine' is in simple words.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T11:14:36.793709+00:00",
+            "last_seen": "2026-11-15T11:14:36.793709+00:00"
+        },
+        {
+            "topic": "Introduction to java programming",
+            "subtopic_type": "core",
+            "subtopic_title": "The Main Parts of a Java Program",
+            "criterion": "simple_language",
+            "rule": "Replace 'data' with 'information' to make it easier to understand.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T16:43:06.419436+00:00",
+            "last_seen": "2026-11-15T16:43:06.419436+00:00"
+        },
+        {
+            "topic": "Introduction to RAG",
+            "subtopic_type": "application",
+            "subtopic_title": "Real-World Example: Research Assistant",
+            "criterion": "accuracy",
+            "rule": "Clarify that RAG retrieves specific data points and summarizes content, rather than 'finding answers to questions' which implies a higher level of reasoning.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T16:52:13.498016+00:00",
+            "last_seen": "2026-11-15T16:52:13.498016+00:00"
+        },
+        {
+            "topic": "Introduction to RAG",
+            "subtopic_type": "application",
+            "subtopic_title": "Real-World Example: Research Assistant",
+            "criterion": "example_quality",
+            "rule": "Replace the manual highlighter example with a concrete, step-by-step example of how an AI system would use RAG to summarize a long research paper.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T16:52:13.500550+00:00",
+            "last_seen": "2026-11-15T16:52:13.500550+00:00"
+        },
+        {
+            "topic": "Introduction to RAG",
+            "subtopic_type": "application",
+            "subtopic_title": "Real-World Example: Research Assistant",
+            "criterion": "example_quality",
+            "rule": "The example describes a manual process (using a highlighter) rather than how RAG works. It must show the AI retrieving and summarizing the information.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T16:52:23.672209+00:00",
+            "last_seen": "2026-11-15T16:52:23.672209+00:00"
+        },
+        {
+            "topic": "Introduction to RAG",
+            "subtopic_type": "application",
+            "subtopic_title": "Real-World Example: Research Assistant",
+            "criterion": "example_quality",
+            "rule": "The example describes a manual process (highlighting) rather than how RAG works. It must show the AI retrieving and summarizing the information.",
+            "occurrences": 1,
+            "created_at": "2026-11-15T16:52:39.848152+00:00",
+            "last_seen": "2026-11-15T16:52:39.848152+00:00"
         }
     ]
 }

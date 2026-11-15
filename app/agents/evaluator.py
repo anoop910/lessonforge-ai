@@ -20,8 +20,10 @@ class EvaluationError(RuntimeError):
     """Raised when the judge cannot return a valid evaluation."""
 
 
-MAX_EVALUATOR_PREVIOUS_CHARS = 1400
-MAX_EVALUATOR_SOURCE_FACTS_CHARS = 1000
+MAX_EVALUATOR_PREVIOUS_CHARS = 1000
+MAX_EVALUATOR_CONTENT_CHARS = 4500
+MAX_EVALUATOR_SUBTOPIC_CHARS = 1600
+MAX_EVALUATOR_SOURCE_FACTS_CHARS = 800
 MAX_EVALUATOR_SOURCE_FACTS = 6
 
 
@@ -104,10 +106,14 @@ class LessonEvaluator:
             used_chars += len(fact) + 2
 
         base_messages = EVALUATOR_PROMPT.format_messages(
-            topic=topic,
+            topic=_clip(topic, 300),
             learner_profile=_clip(learner_profile, 500),
-            subtopic_json=subtopic.model_dump_json(indent=2),
-            generated_content=generated_content,
+            subtopic_json=_clip(
+                subtopic.model_dump_json(), MAX_EVALUATOR_SUBTOPIC_CHARS
+            ),
+            generated_content=_clip(
+                generated_content, MAX_EVALUATOR_CONTENT_CHARS
+            ),
             previous_content=(
                 _clip(previous_content, MAX_EVALUATOR_PREVIOUS_CHARS)
                 or "None. This is the first section of the lesson."

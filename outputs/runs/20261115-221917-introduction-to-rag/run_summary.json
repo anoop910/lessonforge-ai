@@ -1,0 +1,83 @@
+{
+  "run_id": "20261115-221917-introduction-to-rag",
+  "topic": "Introduction to RAG",
+  "created_at": "2026-11-15T16:52:50.375321+00:00",
+  "status": "needs_review",
+  "max_retries_per_subtopic": 2,
+  "sections": [
+    {
+      "id": "S1",
+      "title": "What is RAG?",
+      "status": "passed",
+      "attempts": 1,
+      "failed_criteria": []
+    },
+    {
+      "id": "S2",
+      "title": "Why do we need RAG?",
+      "status": "passed",
+      "attempts": 1,
+      "failed_criteria": []
+    },
+    {
+      "id": "S3",
+      "title": "What is a Language Model?",
+      "status": "passed",
+      "attempts": 1,
+      "failed_criteria": []
+    },
+    {
+      "id": "S4",
+      "title": "What is Retrieval?",
+      "status": "passed",
+      "attempts": 1,
+      "failed_criteria": []
+    },
+    {
+      "id": "S5",
+      "title": "How does RAG work?",
+      "status": "passed",
+      "attempts": 1,
+      "failed_criteria": []
+    },
+    {
+      "id": "S6",
+      "title": "The Retrieval Step in Detail",
+      "status": "passed",
+      "attempts": 1,
+      "failed_criteria": []
+    },
+    {
+      "id": "S7",
+      "title": "The Generation Step in Detail",
+      "status": "passed",
+      "attempts": 1,
+      "failed_criteria": []
+    },
+    {
+      "id": "S8",
+      "title": "Real-World Example: Customer Support",
+      "status": "passed",
+      "attempts": 1,
+      "failed_criteria": []
+    },
+    {
+      "id": "S9",
+      "title": "Real-World Example: Research Assistant",
+      "status": "failed_max_retries",
+      "attempts": 3,
+      "failed_criteria": [
+        "example_quality"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "Next Steps in Learning",
+      "status": "passed",
+      "attempts": 1,
+      "failed_criteria": []
+    }
+  ],
+  "total_rejections": 3,
+  "first_try_pass_rate": 0.9
+}
